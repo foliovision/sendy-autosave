@@ -24,7 +24,11 @@
 					<input type="hidden" name="dark_mode" id="dark_mode" value="<?php echo get_app_info('dark_mode');?>">
 					
 					<script type="text/javascript">
-					$(document).ready(function() {	
+					$(document).ready(function() {
+						// Make sure Save button is also on top of the editor and not just down below
+						if( jQuery('#campaign-save-only-btn').length ) {
+								jQuery('#toggle-wysiwyg' ).before( '<button class="btn" onclick="document.getElementById(\'campaign-save-only-btn\').click(); return false" style="margin-right: .5em"><i class="icon-ok icon-white"></i> Save</button>' );
+						}
 						//Init buttons					
 						<?php if(get_app_info('dark_mode')):?>
 							$("#dark_btn_small").button('toggle');
