@@ -1,4 +1,5 @@
 # Sendy Autosave
+![sendy-autosave](https://user-images.githubusercontent.com/1180948/197518936-2a6f149e-5412-4be1-be6e-2ee95b876d11.png)
 
 Sendy campaign editor is really missing the autosave capabilility which is really common in the modern web.
 
