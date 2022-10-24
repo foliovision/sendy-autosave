@@ -6,7 +6,13 @@
 			allowedContent: true,
 			filebrowserUploadUrl: 'includes/create/upload.php?app=<?php echo get_app_info('app');?>',
 			height: '570px',
-			extraPlugins: 'codemirror,dragresize'
+			extraPlugins: 'codemirror,dragresize,autosave'
+			,autosave: {
+					// discard autosave on Save, Cancel or when switching to Sendy HTML editor
+					saveDetectionSelectors: "a[href^='javascript:__doPostBack'][id*='Save'],a[id*='Cancel'],#toggle-wysiwyg"
+					, delay: 300
+					,'messageType': 'statusbar'
+			}
 			<?php if($dark_mode):?>
 			,skin: 'moono-dark'
 			<?php else:?>
